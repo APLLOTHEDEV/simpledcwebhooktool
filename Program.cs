@@ -53,16 +53,8 @@ namespace ConsoleApp1
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(@"
 
-     ----                    .___                     ___.   .__                   __       __               
-  __| _/____   __  _  __ ____\_ |__ |  |__   ____   ____ |  | __ _/  |_  ____   ____ |  |  
- / __ |/ ___\  \ \/ \/ // __ \| __ \|  |  \ /  _ \ /  _ \|  |/ / \   __\/  _ \ /  _ \|  |  
-/ /_/ \  \___   \     /\  ___/| \_\ \   Y  (  <_> |  <_> )    <   |  | (  <_> |  <_> )  |__
-\____ |\___  >   \/\_/  \___  >___  /___|  /\____/ \____/|__|_ \  |__|  \____/ \____/|____/
-     \/    \/               \/    \/     \/                   \/                                                                                                                            
-                                                                        
-                  -PRIVATE TOOL----------------------------------------------------
-
-
+               welcome to discord webhook message sender example
+               
             ");
 
             }
@@ -107,16 +99,16 @@ namespace ConsoleApp1
 
                 string json = $"{{\"content\":\"{discordmessage}\"}}";
 
-            while (true) {
+    
 
                     
-                        HttpClient hc = new HttpClient();
-                        HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-                        await hc.PostAsync(discordwebhook, content);
+                HttpClient hc = new HttpClient();
+                HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                await hc.PostAsync(discordwebhook, content);
 
 
                     
-                }
+                
 
 
 
